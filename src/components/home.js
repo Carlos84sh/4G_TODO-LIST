@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function(props) {
+
+ export default function Home(props) {
+
     return (
-        <main className="page">
-            <h1>Home page</h1>
-        </main>
+                    <header>
+                        <h1>Todo List</h1>
+                    </header>          
     )
 }
+
