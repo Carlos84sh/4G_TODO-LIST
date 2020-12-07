@@ -5,19 +5,22 @@ import "bootstrap";
 import "./style.css"
 
 import Home from "./components/home.js"
-import Form from "./components/form.js"
-import TodoList from "./components/todoList.js"
+import Navbar from "./components/navbar.js"
 
+const array =[1,4,3];
 
 const container = document.querySelector("#app");
-const component = <Home />;
+const component = (<Home title="Soy un titulo" pepito={array}>
+                        <Navbar />
+                        <h1>Hijo</h1>
+                        <ul>
+                            <li>Carlos</li>
+                            <li>pedro</li>
 
-const formulario = document.querySelector("#formulario");
-const componentForm = <Form />;
+                        </ul>
+                    </Home>
+    
+);
 
-const todolist = document.querySelector("#todolist");
-const componentTodolist = <TodoList />;
+ReactDOM.render(component,container);
 
-ReactDOM.render(component, container);
-ReactDOM.render(componentForm, formulario);
-ReactDOM.render(componentTodolist, todolist);
